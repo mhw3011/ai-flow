@@ -51,13 +51,16 @@ function App() {
 
       setResult("Loading...");
 
-      const res = await fetch("http://localhost:5000/api/ask-ai", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const res = await fetch(
+        "https://ai-flow-backend-lziz.onrender.com/api/ask-ai",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ prompt }),
         },
-        body: JSON.stringify({ prompt }),
-      });
+      );
 
       const data = await res.json();
 
@@ -76,13 +79,16 @@ function App() {
         return;
       }
 
-      const res = await fetch("http://localhost:5000/api/save", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const res = await fetch(
+        "https://ai-flow-backend-lziz.onrender.com/api/save",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ prompt, result }),
         },
-        body: JSON.stringify({ prompt, result }),
-      });
+      );
 
       const data = await res.json();
 
