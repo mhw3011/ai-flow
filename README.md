@@ -1,5 +1,9 @@
 # AI Flow Builder
 
+🔗 Live Demo: [text](https://ai-flow-xi.vercel.app/)
+
+![App Screenshot](./image.png)
+
 A full-stack MERN application where users can enter a prompt, generate an AI response, and visualize the flow using React Flow.
 
 ---
@@ -38,6 +42,24 @@ Create a `.env` file inside `backend/`:
 OPENROUTER_API_KEY=your_api_key
 MONGO_URI=your_mongodb_uri
 ```
+
+---
+
+## 🔑 Getting API Keys
+
+### OpenRouter API Key
+
+1. Go to https://openrouter.ai/
+2. Sign up / log in
+3. Go to dashboard → API Keys
+4. Create a new key and paste it in `.env`
+
+### MongoDB URI
+
+1. Go to https://www.mongodb.com/cloud/atlas
+2. Create a free cluster
+3. Click "Connect" → "Drivers"
+4. Copy the connection string and replace `<password>`
 
 Run backend:
 
